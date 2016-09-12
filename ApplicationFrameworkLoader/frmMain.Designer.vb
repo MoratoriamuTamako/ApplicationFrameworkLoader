@@ -29,8 +29,8 @@ Partial Class frmMain
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.TabControlList = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TreeViewMe = New System.Windows.Forms.TreeView()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TreeViewAll = New System.Windows.Forms.TreeView()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TabControlDetail = New System.Windows.Forms.TabControl()
@@ -121,6 +121,14 @@ Partial Class frmMain
         Me.TabPage1.Text = "我的模块"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'TreeViewMe
+        '
+        Me.TreeViewMe.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TreeViewMe.Location = New System.Drawing.Point(3, 3)
+        Me.TreeViewMe.Name = "TreeViewMe"
+        Me.TreeViewMe.Size = New System.Drawing.Size(227, 433)
+        Me.TreeViewMe.TabIndex = 0
+        '
         'TabPage2
         '
         Me.TabPage2.Controls.Add(Me.TreeViewAll)
@@ -131,14 +139,6 @@ Partial Class frmMain
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "所有模块"
         Me.TabPage2.UseVisualStyleBackColor = True
-        '
-        'TreeViewMe
-        '
-        Me.TreeViewMe.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TreeViewMe.Location = New System.Drawing.Point(3, 3)
-        Me.TreeViewMe.Name = "TreeViewMe"
-        Me.TreeViewMe.Size = New System.Drawing.Size(227, 433)
-        Me.TreeViewMe.TabIndex = 0
         '
         'TreeViewAll
         '
@@ -183,7 +183,7 @@ Partial Class frmMain
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(249, 94)
+        Me.TabPage4.Size = New System.Drawing.Size(583, 439)
         Me.TabPage4.TabIndex = 1
         Me.TabPage4.Text = "TabPage4"
         Me.TabPage4.UseVisualStyleBackColor = True

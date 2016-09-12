@@ -2,8 +2,14 @@
 Imports System.IO
 Public Class frmMain
     Const CLOSE_SIZE As Integer = 12
-    Public Sub New()
+    <System.STAThread()>
+    Public Shared Sub Main()
 
+        System.Windows.Forms.Application.EnableVisualStyles()
+        System.Windows.Forms.Application.Run(New frmMain)
+    End Sub 'Main
+
+    Public Sub New()
         ' 此调用是设计器所必需的。
         InitializeComponent()
 
@@ -54,7 +60,7 @@ Public Class frmMain
 
     End Sub
 
-    Private Sub TabControlDetail_DrawItem(sender As Object, e As DrawItemEventArgs)
+    Private Sub TabControlDetail_DrawItem(sender As Object, e As DrawItemEventArgs) Handles TabControlDetail.DrawItem
         Try
             Dim myTabRect As Rectangle = TabControlDetail.GetTabRect(e.Index)
             '先添加TabPage属性   
@@ -88,11 +94,11 @@ Public Class frmMain
 
             e.Graphics.Dispose()
         Catch ex As Exception
-
+            msg.Text = ex.Message
         End Try
     End Sub
 
-    Private Sub TabControlDetail_MouseDown(sender As Object, e As MouseEventArgs)
+    Private Sub TabControlDetail_MouseDown(sender As Object, e As MouseEventArgs) Handles TabControlDetail.MouseDown
         If e.Button = MouseButtons.Left Then
             Dim x As Integer = e.X
             Dim y As Integer = e.Y
@@ -114,7 +120,7 @@ Public Class frmMain
 
     End Sub
 
-    Private Sub TreeViewMe_NodeMouseDoubleClick(sender As Object, e As TreeNodeMouseClickEventArgs)
+    Private Sub TreeViewMe_NodeMouseDoubleClick(sender As Object, e As TreeNodeMouseClickEventArgs) Handles TreeViewMe.NodeMouseDoubleClick
         Try
             If TreeViewMe.SelectedNode.Level > 0 Then
                 For Each DetailPage As TabPage In Me.TabControlDetail.TabPages

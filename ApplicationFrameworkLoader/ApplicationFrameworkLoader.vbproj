@@ -6,11 +6,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{4FD37C6D-8710-46B6-BBBB-AD89CA70CD56}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>ApplicationFrameworkLoader.My.MyApplication</StartupObject>
+    <StartupObject>Sub Main</StartupObject>
     <RootNamespace>ApplicationFrameworkLoader</RootNamespace>
     <AssemblyName>ApplicationFrameworkLoader</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>WindowsForms</MyType>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
